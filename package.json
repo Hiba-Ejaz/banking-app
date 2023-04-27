@@ -6,7 +6,13 @@
     "start": "node build/index.js"
   },
   "devDependencies": {
-    "@types/node": "^18.15.11",
+    "@types/node": "^18.16.1",
     "typescript": "^5.0.3"
-  }
+  },
+  "name": "fs15_5-es6-ts_banking-app",
+  "description": "- Check the scripts in `package.json` to run the suitable command for each challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
