@@ -22,8 +22,6 @@ addCustomer(customer:Customer):boolean{
     return true
 }
 }
-//- `addCustomerTransaction()`, has a parameter of type string (id of customer), a number (for transaction) 
-//and returns a boolean. Returns true if the customers transaction is added successfully or false otherwise.
 addCustomerTransaction(customerId: string, transactionNumber: number): boolean {
     const customer = this.customers.find(c => c.getId === customerId);
     if(customer?.addTransactions(transactionNumber)){

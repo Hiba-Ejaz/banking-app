@@ -42,15 +42,9 @@ checkBranch(branchOfBank:Branch):boolean{
      else 
      return false
 }
-//`listCustomers()`, 
-//has two parameters, branch and boolean and 
-//returns a boolean.
- //Return true if the branch exists or false otherwise. 
-//This method prints out a list of customers with transaction details if second parameter is true.
 listCustomers(branch:Branch,bool:boolean):boolean{
 if(this.branches.some((b)=>b===branch)){
     if(bool){
-       // const customer: [] = branch.getCustomers
        branch.getCustomers.forEach((customer)=>
        console.log(customer,customer.getTransactions)
        )
