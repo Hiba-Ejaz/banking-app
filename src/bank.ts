@@ -1,6 +1,6 @@
 import Branch from "./Branch";
 import Customer from "./Customer";
-import InterfaceTransaction from "./InterfaceTransaction";
+import InterfaceTransaction from "./Transaction";
 
 class Bank {
     private branches: Branch[] 
@@ -47,7 +47,7 @@ if(this.branches.some((b)=>b===branch)){
     if(bool){
         const customers: string[] = branch.getCustomers()
        customers.forEach((customer)=>
-       console.log(customer,customer.getTransactions()))
+       console.log(customer,customer.getTransactions())
     }
     return true
 }

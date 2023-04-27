@@ -67,8 +67,6 @@ Implement the following classes, interface, and codes (you can decide which file
     - It has 2 properties, a number `amount`, and a Date called `date`. `date` refers to the time that transaction has been created.
 
 Run the following codes in `index.ts`and share your results and findings in the Slack channel
-
-```
 const arizonaBank = new Bank("Arizona")
 const westBranch = new Branch("West Branch")
 const sunBranch = new Branch("Sun Branch")
@@ -78,7 +76,7 @@ const customer3 = new Customer("John")
 
 arizonaBank.addBranch(westBranch)
 arizonaBank.addBranch(sunBranch)
-arizonaBank.addBranch(westBranch) 
+arizonaBank.addBranch(westBranch)
 
 arizonaBank.findBranchByName("bank")
 arizonaBank.findBranchByName("sun")
@@ -96,10 +94,5 @@ customer1.addTransactions(-1000)
 console.log(customer1.getBalance())
 console.log(arizonaBank.listCustomers(westBranch, true))
 console.log(arizonaBank.listCustomers(sunBranch,true))
-```
 
 You can add more codes to check the functionality and secrity of your banking system
-
-## Installation
-1. After clone the project from your forked repo, run `npm install`
-2. Run `npm run watch` to see code running in watch mode, or check `package.json` for extra scripts

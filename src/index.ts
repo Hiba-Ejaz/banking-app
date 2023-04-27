@@ -1,3 +1,7 @@
+import Bank from "./Bank"
+import Branch from "./Branch"
+import Customer from "./Customer"
+import InterfaceTransaction from "./Transaction"
 const arizonaBank = new Bank("Arizona")
 const westBranch = new Branch("West Branch")
 const sunBranch = new Branch("Sun Branch")
