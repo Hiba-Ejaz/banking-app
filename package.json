@@ -7,6 +7,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.16.1",
+    "ts-node": "^10.9.1",
     "typescript": "^5.0.3"
   },
   "name": "fs15_5-es6-ts_banking-app",

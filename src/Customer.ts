@@ -16,7 +16,7 @@ class Customer {
     get getId() {
         return this.id
     }
-     get gettransactions() {
+     get getTransactions() {
           return this.transactions;
     }
      getBalance(): number {

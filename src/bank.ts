@@ -18,24 +18,29 @@ class Bank {
         return false;
     }
     addCustomer(branch:Branch,customer:Customer):boolean{
-        if (this.branches.some(b => b === branch && b.findCustomer(customer.id))) {
-            return false;
+        if (this.branches.some(b => b === branch && b.findCustomer(customer.getId))) {
+            return false
         } else {
             const selectedBranch = this.branches.find(b => b === branch)
-            return (selectedBranch?.addCustomer(customer)) 
+            selectedBranch?.addCustomer(customer) 
+            return true
         }
     }
     addCustomerTransaction(branch:Branch,customerId:string,transactionAmount:number):boolean{  
-        return (this.branches.some(b => b === branch)).addCustomerTransaction(customerId,transactionAmount)  
+        //return 
+        const obj=(this.branches.find(b => b === branch))
+        obj?.addCustomerTransaction(customerId,transactionAmount) 
+        return true 
     }
 findBranchByName(branchName:string):Branch[] | null{  
-    return this.branches.filter(b => b.getName() === branchName);
+    return this.branches.filter(b => b.getName === branchName);
 }
 checkBranch(branchOfBank:Branch):boolean{  
-     if(this.branches.filter(b => b === branchOfBank).getName()){
+   if(this.branches.includes(branchOfBank)){
         return true
      }
-     else return false
+     else 
+     return false
 }
 //`listCustomers()`, 
 //has two parameters, branch and boolean and 
@@ -45,9 +50,10 @@ checkBranch(branchOfBank:Branch):boolean{
 listCustomers(branch:Branch,bool:boolean):boolean{
 if(this.branches.some((b)=>b===branch)){
     if(bool){
-        const customers: string[] = branch.getCustomers()
-       customers.forEach((customer)=>
-       console.log(customer,customer.getTransactions())
+       // const customer: [] = branch.getCustomers
+       branch.getCustomers.forEach((customer)=>
+       console.log(customer,customer.getTransactions)
+       )
     }
     return true
 }
